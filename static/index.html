@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Group</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 20px;
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero {
+            background-color: #ccc;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+        }
+        #about {
+            background-color: #f4f4f4;
+        }
+        #music {
+            background-color: #eaeaea;
+        }
+        #contact {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand">Ingrid Alex Music</div>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#music">Listen</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>[Photo of the Music Group]</h1>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>[Blurb about the music group]</p>
+    </section>
+
+    <section id="music">
+        <h2>Listen to Our Music</h2>
+        <p>[Embed music player or links to songs]</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>[Contact form or contact details]</p>
+    </section>
+</body>
+</html>
