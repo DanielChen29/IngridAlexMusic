@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Group</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      transition: opacity 0.3s ease;
+    }
+    nav.visible {
+      display: flex;
+      opacity: 1;
+    }
+
+    nav .brand {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    nav .brand a {
+      color: white;
+      text-decoration: none;
+    }
+    nav img {
+      max-width: 150px;
+      padding-top: 5px;
+      filter: invert(1);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 40px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      color: #ddd;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      box-sizing: border-box;
+    }
+
+    .hero {
+      background: url("images/chairs.jpg") no-repeat center center;
+      background-size: cover;
+      color: lightgray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 img {
+      max-width: 500px;
+      filter: invert(1);
+    }
+    .hero ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0 0;
+      display: flex;
+      gap: 30px;
+    }
+    .hero ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    .hero ul li a:hover {
+      color: #ddd;
+    }
+
+    #about {
+      display: flex;
+      padding: 40px;
+      background: #f4f4f4;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-photo {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .about-photo img {
+      max-width: 70%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .about-text {
+      flex: 1;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      margin-left: 30px;
+      margin-right: 45px;
+    }
+
+    #music, #video, #contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #music { background-color:  #ddd; }
+    #video { background-color: #eaeaea; }
+    #contact { background-color: #cfcfcf; padding-bottom: 100px; }
+  </style>
+</head>
+<body>
+  <nav id="mainNav">
+    <div class="brand"><a href="#"><img src="images/Ingrid&AlexLogo.png" alt="homeref"></a></div>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#video">Watch</a></li>
+      <li><a href="#music">Listen</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="hero">
+    <h1><img src="images/Ingrid&AlexLogo.png" alt="Overlay Image"></h1>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#video">Watch</a></li>
+      <li><a href="#music">Listen</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <div class="about-photo">
+      <img src="images/IngridAlexPhoto.jpg" alt="Ingrid and Alex">
+    </div>
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>Alex Price and Ingrid Wheelock are an acoustic guitar and vocal duo based in Seattle, Washington. They enjoy performing in both indoor and outdoor venues in the Puget Sound region. Playing a mix of audience-pleasing covers and original music, their repertoire includes soft rock, alt folk, Americana, and the occasional jazz and blues tunes.</p>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Watch us perform Willin'</h2>
+    <p>[Embed video player or links to songs]</p>
+  </section>
+
+  <section id="music">
+    <h2>Listen to Our Music</h2>
+    <p>[Embed music player]</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>[Contact form or contact details]</p>
+  </section>
+
+  <script>
+    const nav = document.getElementById("mainNav");
+    const hero = document.getElementById("hero");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > hero.offsetHeight - 70) {
+        nav.classList.add("visible");
+      } else {
+        nav.classList.remove("visible");
+      }
+    });
+  </script>
+</body>
+</html>
