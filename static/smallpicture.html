@@ -7,12 +7,12 @@
   <style>
     html {
       scroll-behavior: smooth;
-      overflow-x: hidden; /* prevent horizontal scrolling */
+      overflow-x: hidden;
     }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      overflow-x: hidden; /* also prevent horizontal scroll on body */
+      overflow-x: hidden;
     }
 
     nav {
@@ -68,7 +68,7 @@
       min-height: 100vh;
       padding: 80px 20px;
       box-sizing: border-box;
-      max-width: 100%; /* prevent sections from being wider than screen */
+      max-width: 100%;
       overflow-x: hidden;
     }
 
@@ -131,27 +131,56 @@
       margin-right: 45px;
     }
 
-    #music, #video, #contact {
+    #listen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ddd;
+      gap: 40px;
+    }
+    .video-container {
+      flex: 1;
+      margin-left: 100px;
+      max-width: 600px;
+      aspect-ratio: 16/9;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-    #music { background-color:  #ddd; }
-    #video { background-color: #eaeaea; height: 100vh; }
-    .video-container {
-      width: 100%;
-      max-width: 800px;
-      aspect-ratio: 16 / 9;
-      margin: 0 auto;
     }
     .video-container video {
       width: 100%;
       height: 100%;
       border-radius: 10px;
     }
+    .audio-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .audio-player {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .audio-player h3 {
+      font-weight: lighter;
+      margin: 10px 0;
+    }
+    .audio-player audio {
+      display: block;
+      margin: 0 auto;
+    }
 
-    #contact { background-color: #cfcfcf; padding-bottom: 100px; }
+    #contact {
+      background-color: #cfcfcf;
+      padding-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
@@ -159,8 +188,7 @@
     <div class="brand"><a href="#"><img src="images/Ingrid&AlexLogo.png" alt="homeref"></a></div>
     <ul>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#video">Watch</a></li>
-      <li><a href="#music">Listen</a></li>
+      <li><a href="#listen">Listen</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -169,8 +197,7 @@
     <h1><img src="images/Ingrid&AlexLogo.png" alt="Overlay Image"></h1>
     <ul>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#video">Watch</a></li>
-      <li><a href="#music">Listen</a></li>
+      <li><a href="#listen">Listen</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </section>
@@ -185,19 +212,38 @@
     </div>
   </section>
 
-  <section id="video">
-    <h2>Watch Us Perform "Willin'"</h2>
+  <section id="listen">
     <div class="video-container">
+      <h2>Watch Us Perform "Willin'"</h2>
       <video controls>
         <source src="videos/Willin' I&A.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
-  </section>
-
-  <section id="music">
-    <h2>Listen to Our Music</h2>
-    <p>[Embed music player]</p>
+    <div class="audio-container">
+      <h2>Listen to Our Music</h2>
+      <div class="audio-player">
+        <h3>Bluer</h3>
+        <audio controls>
+          <source src="songs/Bluer I&A 9-1-25 A.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-player">
+        <h3>Hey Stranger</h3>
+        <audio controls>
+          <source src="songs/Hey Stranger I&A.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-player">
+        <h3>Modern Blue</h3>
+        <audio controls>
+          <source src="songs/Modern Blue I&A 9-1-25.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
