@@ -158,6 +158,65 @@
       color: blue;
       text-decoration: underline;
     }
+
+
+  /* --- MOBILE STYLES BELOW --- */
+  @media (max-width: 768px) {
+    section {
+      padding: 60px 15px;
+    }
+
+    .hero h1 img {
+      max-width: 90%;
+    }
+
+    .hero ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    #about {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .about-photo img {
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      margin: 0;
+      max-width: 100%;
+      font-size: 0.95em;
+    }
+
+    #listen {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .video-container {
+      margin: 0;
+      width: 100%;
+      max-width: 90vw;
+      aspect-ratio: 16/9;
+    }
+
+    .audio-container {
+      width: 100%;
+      max-width: 90vw;
+    }
+
+    .audio-player {
+      width: 100%;
+    }
+
+    .audio-container h2 {
+      font-size: 1.5em;
+    }
+  }
   </style>
 </head>
 <body>
