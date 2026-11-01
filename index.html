@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,67 +84,98 @@
     }
 
     #listen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-  gap: 40px;
-  min-height: 100vh; /* fills the screen vertically */
-  padding: 40px;
-  box-sizing: border-box;
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #eaeaea;
+      gap: 40px;
+      min-height: 100vh;
+      padding: 40px;
+      box-sizing: border-box;
+    }
 
-.video-container {
-  flex: 1;
-  max-width: 600px;
-  aspect-ratio: 16/9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;   /* optional */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin-left: 50px;
-}
+    .video-container {
+      flex: 1;
+      max-width: 600px;
+      aspect-ratio: 16/9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      margin-left: 50px;
+    }
 
-.video-container iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
 
-.audio-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    .audio-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-.audio-container h2 {
-  font-size: 2em; /* larger Demo Tracks title */
-  margin-bottom: 20px;
-}
+    .audio-container h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-.audio-player {
-  width: 90%; /* makes audio controls wider */
-  max-width: 500px;
-  text-align: center;
-  margin-bottom: 15px;
-}
+    .audio-player {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
-.audio-player h3 {
-  font-weight: lighter;
-  font-size: 0.95em; /* slightly smaller titles */
-  margin: 8px 0;
-}
+    .audio-player h3 {
+      font-weight: lighter;
+      font-size: 0.95em;
+      margin: 8px 0;
+    }
 
-.audio-player audio {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
+    .audio-player audio {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
 
+    /* UPCOMING SHOWS SECTION */
+    #shows {
+      background-color: #f4f4f4;
+      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .shows-container {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .show-item {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 20px 30px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+
+    .show-item h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2em;
+    }
+
+    .show-item p {
+      margin: 5px 0;
+    }
 
     #contact {
       background-color: #ddd;
@@ -159,64 +191,63 @@
       text-decoration: underline;
     }
 
+    /* --- MOBILE STYLES BELOW --- */
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 15px;
+      }
 
-  /* --- MOBILE STYLES BELOW --- */
-  @media (max-width: 768px) {
-    section {
-      padding: 60px 15px;
-    }
+      .hero h1 img {
+        max-width: 90%;
+      }
 
-    .hero h1 img {
-      max-width: 90%;
-    }
+      .hero ul {
+        flex-direction: column;
+        gap: 15px;
+      }
 
-    .hero ul {
-      flex-direction: column;
-      gap: 15px;
-    }
+      #about {
+        flex-direction: column;
+        padding: 20px;
+      }
 
-    #about {
-      flex-direction: column;
-      padding: 20px;
-    }
+      .about-photo img {
+        max-width: 90%;
+        margin-bottom: 20px;
+      }
 
-    .about-photo img {
-      max-width: 90%;
-      margin-bottom: 20px;
-    }
+      .about-text {
+        margin: 0;
+        max-width: 100%;
+        font-size: 0.95em;
+      }
 
-    .about-text {
-      margin: 0;
-      max-width: 100%;
-      font-size: 0.95em;
-    }
+      #listen {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
 
-    #listen {
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-    }
+      .video-container {
+        margin: 0;
+        width: 100%;
+        max-width: 90vw;
+        aspect-ratio: 16/9;
+      }
 
-    .video-container {
-      margin: 0;
-      width: 100%;
-      max-width: 90vw;
-      aspect-ratio: 16/9;
-    }
+      .audio-container {
+        width: 100%;
+        max-width: 90vw;
+      }
 
-    .audio-container {
-      width: 100%;
-      max-width: 90vw;
-    }
+      .audio-player {
+        width: 100%;
+      }
 
-    .audio-player {
-      width: 100%;
+      .audio-container h2 {
+        font-size: 1.5em;
+      }
     }
-
-    .audio-container h2 {
-      font-size: 1.5em;
-    }
-  }
   </style>
 </head>
 <body>
@@ -225,6 +256,7 @@
     <ul>
       <li><a href="#about">About Us</a></li>
       <li><a href="#listen">Listen</a></li>
+      <li><a href="#shows">Upcoming Shows</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </section>
@@ -248,7 +280,8 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
       </iframe>
-    </div>    
+    </div>
+
     <div class="audio-container">
       <h2>Demo Tracks</h2>
       <div class="audio-player">
@@ -286,6 +319,30 @@
           Your browser does not support the audio element.
         </audio>
       </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING SHOWS SECTION -->
+  <section id="shows">
+    <h2>Upcoming Shows</h2>
+    <div class="shows-container">
+
+      <div class="show-item">
+        <h3>Venue Name</h3>
+        <p>Saturday, Month Day, Year</p>
+        <p>Time: 7:00 PM</p>
+        <p>Location: City, WA</p>
+      </div>
+
+      <div class="show-item">
+        <h3>Venue Name</h3>
+        <p>Saturday, Month Day, Year</p>
+        <p>Time: 7:00 PM</p>
+        <p>Location: City, WA</p>
+      </div>
+
+      <!-- Add more show-item blocks as needed -->
+
     </div>
   </section>
 
